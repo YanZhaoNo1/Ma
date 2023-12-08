@@ -1,0 +1,10 @@
+clc;clf;
+x=10:5:30;
+y=[25.2,29.8,31.2,31.7,29.4]
+xi=10:0.25:30;
+yi1=interp1(x,y,xi,'*nearest');
+yi2=interp1(x,y,xi,'*linear');
+yi3=interp1(x,y,xi,'*spline');
+yi4=interp1(x,y,xi,'*pchip');
+plot(x,y,'ro',xi,yi1,'--',xi,yi2,'-',xi,yi3,'k.-',xi,yi4,'m:')
+legend('原始数据','最近点插值','线性插值','样条插值','立方插值')
