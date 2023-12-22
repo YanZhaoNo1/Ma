@@ -8,7 +8,7 @@ figure(1)
 subplot(1,2,1),mesh(x,y,z),title('数据点')
 subplot(1,2,2),mesh(x1,y1,z1),title('函数图象')
 
-[xi,yi]=meshgrid(-2:.1:2);
+[xi,yi]=meshgrid(-3:.1:3);
 zi1=interp2(x,y,z,xi,yi,'*nearest');
 zi2=interp2(x,y,z,xi,yi,'*linear');
 zi3=interp2(x,y,z,xi,yi,'*spline');
